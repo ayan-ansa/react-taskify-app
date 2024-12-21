@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(40, 134, 172);
+  font-family: "Nunito", serif;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 7px;
+  padding-top: 2rem;
+}
+
+h1 {
+  margin: 0 0 6px;
+  text-align: center;
+}
+
+.todo-form {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.todo-form input {
+  padding: 14px 0 14px 1rem;
+  font-size: 15px;
+  border: none;
+  flex: 1;
+  border-radius: 6rem;
+  transform: 0.2s;
+  box-shadow: inset 0 0 5px black;
+}
+
+.todo-form input:focus {
+  box-shadow: 0 0 10px 1000px rgb(0, 0, 0, 0.5);
+  outline: none;
+}
+
+.todo-form button {
+  position: absolute;
+  right: 5px;
+  height: 40px;
+  top: 2px;
+  width: 40px;
+  border-radius: 50%;
+  border: 0;
+  font-size: 14px;
+  cursor: pointer;
+  outline: 0;
+  background: rgb(40, 134, 172);
+  color: white;
+}
+
+
+.container {
+  margin-top: 1rem;
+  display: flex;
+  align-items: start;
+  gap: .4rem;
+}
+
+@media (max-width:450px) {
+  .container {
+    flex-direction: column;
+    gap: .6rem;
+    align-items: center;
+  }
+}
+
+.heading_text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: beige;
+}
+
+.active_task_container,
+.completed_task_container {
+  padding: 10px;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.active_task_container {
+  background: rgb(67, 200, 212);
+}
+
+.completed_task_container {
+  background: rgb(235, 103, 80);
+}
+
+.dragactive {
+  background-color: rgb(39, 172, 225);
+}
+
+.dragcomplete {
+  background-color: rgb(212, 37, 119);
+}
+
+.drag {
+  box-shadow: 0 0 20px black;
+}
+
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  padding: .6rem .8rem;
+  cursor: grab;
+  margin-top: 8px;
+  background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
+}
+
+.todo:hover {
+  transform: scale(1.02);
+  transition: 0.3 ease-in-out;
+}
+
+.todo p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.todo .icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.todo .icons svg {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.complete {
+  text-decoration: line-through;
+}
+
+/* @media (max-width:600px) {
+  .app {
+    
+  }
+} */
